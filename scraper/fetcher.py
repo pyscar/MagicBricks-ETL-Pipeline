@@ -16,7 +16,6 @@ from scraper.config import HEADERS
 
 
 def fetch_page(url: str) -> str:
-    
     """
     Fetches the HTML content of a given URL.
 
@@ -27,15 +26,22 @@ def fetch_page(url: str) -> str:
         str: Raw HTML content of the page
 
     Raises:
-        requests.HTTPError: If the HTTP request fails
+        PermissionError: If access is blocked (HTTP 403)
+        requests.HTTPError: For other HTTP errors
     """
     response = requests.get(
         url,
         headers=HEADERS,   # Mimic a real browser to reduce blocking
-        timeout=30         
+        timeout=30
     )
 
-    # Raise an exception for HTTP error responses 
+    # Explicitly handle forbidden access (common in cloud environments)
+    if response.status_code == 403:
+        raise PermissionError(
+            "403 Forbidden: Access blocked by MagicBricks (cloud environment detected)."
+        )
+
+    # Raise exception for other HTTP errors
     response.raise_for_status()
 
     return response.text
