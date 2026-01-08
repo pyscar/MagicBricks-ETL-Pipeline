@@ -162,12 +162,13 @@ Please respect MagicBricks’ terms of service when scraping data.
 
 ## 👤 Author
 
-**Oscar Ka**
+**Oscar Kiamba**
 Computer Science (AI & ML) | Data Engineering & Analytics Enthusiast
 
 📫 Connect with me on GitHub & LinkedIn
 
 ---
+
 
 
 
