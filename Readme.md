@@ -1,7 +1,10 @@
-```md
 # MagicBricks Property Data Scraper & ETL Pipeline
 
 An end-to-end **ETL (Extract → Transform → Load)** web scraping application that collects real-estate listings from **MagicBricks**, cleans and normalizes the data, and provides downloadable CSV outputs through an interactive **Streamlit** interface.
+
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue)](https://www.python.org/)[![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-bs4-green)](https://www.crummy.com/software/BeautifulSoup/)
+[![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-yellow)](https://pandas.pydata.org/)[![Streamlit](https://img.shields.io/badge/Streamlit-App-red)](https://streamlit.io/)
+[![Web%20Scraping](https://img.shields.io/badge/Web%20Scraping-ETL-purple)](#)
 
 ---
 
@@ -168,9 +171,5 @@ Computer Science (AI & ML) | Data Engineering & Analytics Enthusiast
 
 ---
 
-⭐ If you find this project useful, consider giving it a star!
 
-```
-Do you want me to do that next?
-```
 
