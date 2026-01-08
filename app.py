@@ -100,21 +100,19 @@ if st.button("Run Scraper"):
             st.session_state.demo_mode = False
             st.success("Extraction completed successfully")
 
-        except requests.exceptions.HTTPError as e:
-            if "403" in str(e):
+        except Exception as e:
+            error_message = str(e)
+
+            if "403" in error_message or "Forbidden" in error_message:
                 st.session_state.demo_mode = True
                 st.session_state.scraped = True
 
-                st.warning("Live scraping blocked (403 Forbidden)")
-                st.info("Switching to demo mode using sample Mumbai data")
+                st.warning("Live scraping blocked by MagicBricks (403 Forbidden)")
+                st.info("Demo mode enabled using sample Mumbai data")
 
             else:
-                st.error("HTTP error occurred")
-                st.code(str(e))
-
-        except Exception as e:
-            st.error("Unexpected error occurred")
-            st.code(str(e))
+                st.error("An unexpected error occurred")
+                st.code(error_message)
 
 # -------------------------------
 # Demo mode override paths
@@ -147,8 +145,8 @@ if st.session_state.demo_mode:
 if st.session_state.scraped and os.path.exists(raw_path):
     st.markdown("### 📄 Raw Data Preview")
     df_raw = pd.read_csv(raw_path)
-    st.dataframe(df_raw.head(5), use_container_width=True)
-
+    st.dataframe(df_raw.head(5), width='stretch')
+    
     with open(raw_path, "rb") as f:
         st.download_button(
             label="Download Raw Data",
@@ -205,7 +203,7 @@ with c3:
 if (st.session_state.cleaned or st.session_state.demo_mode) and os.path.exists(clean_path):
     st.markdown("### 🧹 Cleaned Data Preview")
     df_clean = pd.read_csv(clean_path)
-    st.dataframe(df_clean.head(5), use_container_width=True)
+    st.dataframe(df_clean.head(5), width='stretch')
 
     with open(clean_path, "rb") as f:
         st.download_button(
