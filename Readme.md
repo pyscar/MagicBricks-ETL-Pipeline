@@ -152,10 +152,24 @@ streamlit run app.py
 * API layer
 
 ---
+## ⚠️ Note on Web Scraping
+
+MagicBricks actively blocks scraping from cloud environments such as:
+
+- Streamlit Cloud
+- GitHub Codespaces
+- AWS / GCP / Azure servers
+
+### ✅ Expected behavior
+- Scraper works when run **locally**
+- Streamlit cloud app demonstrates:
+  - ETL pipeline
+  - Data cleaning logic
+  - CSV previews
+  - UI & workflow
 
 ## ⚠️ Disclaimer
-
-This project is for **educational purposes only**.
+This project is intended for **educational and portfolio purposes**.
 Please respect MagicBricks’ terms of service when scraping data.
 
 ---
@@ -168,6 +182,7 @@ Computer Science (AI & ML) | Data Engineering & Analytics Enthusiast
 📫 Connect with me on GitHub & LinkedIn
 
 ---
+
 
 
 
