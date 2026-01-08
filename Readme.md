@@ -1,3 +1,13 @@
+I see the problem — your Markdown has a few issues that make it not render properly:
+
+1. You have **extra backticks (`) around code blocks**, sometimes using four instead of three.
+2. The `<p>` tags with images work, but sometimes GitHub prefers simpler Markdown image syntax.
+3. The ETL pipeline section uses triple backticks incorrectly — it should be a code block or inline formatting, but right now it’s conflicting with the surrounding Markdown.
+4. Minor indentation issues inside code blocks (like project structure).
+
+Here’s a **cleaned, ready-to-copy version** that should render properly on GitHub:
+
+```md
 # MagicBricks Property Data Scraper & ETL Pipeline
 
 An end-to-end **ETL (Extract → Transform → Load)** web scraping application that collects real-estate listings from **MagicBricks**, cleans and normalizes the data, and provides downloadable CSV outputs through an interactive **Streamlit** interface.
@@ -55,28 +65,32 @@ This project automates the process of collecting and preparing real-estate data 
 
 ## 📂 Project Structure
 
-MagicBricks_etl_pipeline/
+```
+
+MagicBricks_web_scraping/
 │
-├── app.py # Streamlit application
-├── requirements.txt # Dependencies
+├── app.py                     # Streamlit application
+├── requirements.txt           # Dependencies
 ├── README.md
 │
 ├── scraper/
-│ ├── scraper.py # Scraping controller
-│ ├── fetcher.py # HTTP requests
-│ ├── parser.py # HTML parsing
-│ ├── paginator.py # Pagination logic
-│ └── config.py # Headers & constants
+│   ├── scraper.py             # Scraping controller
+│   ├── fetcher.py             # HTTP requests
+│   ├── parser.py              # HTML parsing
+│   ├── paginator.py           # Pagination logic
+│   └── config.py              # Headers & constants
 │
 ├── utils/
-│ └── data_cleaner.py # Data cleaning & transformation
+│   └── data_cleaner.py        # Data cleaning & transformation
 │
 ├── data/
-│ ├── raw/ # Raw scraped CSVs (small sample for demo)
-│ └── processed/ # Cleaned CSVs (small sample for demo)
+│   ├── raw/                   # Raw scraped CSVs (small sample for demo)
+│   └── processed/             # Cleaned CSVs (small sample for demo)
 │
 └── .streamlit/
-└── config.toml # Streamlit UI config
+└── config.toml            # Streamlit UI config
+
+````
 
 ---
 
@@ -86,80 +100,85 @@ MagicBricks_etl_pipeline/
 ```bash
 git clone https://github.com/<your-username>/magicbricks-etl-pipeline.git
 cd magicbricks-etl-pipeline
+````
 
 ### 2️⃣ Create virtual environment
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate      # Mac/Linux
 .venv\Scripts\activate         # Windows
+```
 
 ### 3️⃣ Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
 ### 4️⃣ Run Streamlit app
+
+```bash
 streamlit run app.py
+```
 
-📥 Outputs
-Raw Data
+---
 
-Original scraped data
+## 📥 Outputs
 
-Minimal processing
+### Raw Data
 
-Useful for debugging or re-processing
+* Original scraped data
+* Minimal processing
+* Useful for debugging or re-processing
 
-Cleaned Data
+### Cleaned Data
 
-Standardized prices (INR / Lakh)
+* Standardized prices (INR / Lakh)
+* Clean locality & city extraction
+* Normalized property attributes
+* Analysis-ready format
 
-Clean locality & city extraction
+---
 
-Normalized property attributes
+## 🧠 Key Challenges Solved
 
-Analysis-ready format
+* Mixed location formats (comma & space separated)
+* Missing project names
+* City vs locality misclassification (e.g., *New Delhi*)
+* Pagination handling
+* Safe scraping with headers & timeouts
 
-🧠 Key Challenges Solved
+---
 
-Mixed location formats (comma & space separated)
+## 📌 Future Enhancements
 
-Missing project names
+* Add price & BHK filters
+* Interactive charts (price distribution)
+* Database storage (PostgreSQL / SQLite)
+* Scheduled scraping
+* API layer
 
-City vs locality misclassification (e.g., New Delhi)
+---
 
-Pagination handling
+## ⚠️ Disclaimer
 
-Safe scraping with headers & timeouts
-
-📌 Future Enhancements
-
-Add price & BHK filters
-
-Interactive charts (price distribution)
-
-Database storage (PostgreSQL / SQLite)
-
-Scheduled scraping
-
-API layer
-
-⚠️ Disclaimer
-
-This project is for educational purposes only.
+This project is for **educational purposes only**.
 Please respect MagicBricks’ terms of service when scraping data.
 
-👤 Author
+---
 
-Oscar Ka
+## 👤 Author
+
+**Oscar Ka**
 Computer Science (AI & ML) | Data Engineering & Analytics Enthusiast
 
 📫 Connect with me on GitHub & LinkedIn
 
+---
+
 ⭐ If you find this project useful, consider giving it a star!
 
-
-
-
-
-
-
-
+```
+Do you want me to do that next?
+```
