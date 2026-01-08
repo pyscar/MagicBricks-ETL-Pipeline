@@ -4,7 +4,9 @@ An end-to-end **ETL (Extract → Transform → Load)** web scraping application 
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue)](https://www.python.org/)[![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-bs4-green)](https://www.crummy.com/software/BeautifulSoup/)
 [![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-yellow)](https://pandas.pydata.org/)[![Streamlit](https://img.shields.io/badge/Streamlit-App-red)](https://streamlit.io/)
-[![Web%20Scraping](https://img.shields.io/badge/Web%20Scraping-ETL-purple)](#)
+[![Web%20Scraping](https://img.shields.io/badge/Web%20Scraping-ETL-purple)](#)[![License](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Active-success)](#)
+
 
 ---
 
@@ -42,10 +44,8 @@ This project automates the process of collecting and preparing real-estate data 
 
 ## 🧰 Tech Stack
 
-![Python](https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg)  
-![BeautifulSoup](https://pandas.pydata.org/static/img/pandas_mark.svg)  
-![Pandas](https://pandas.pydata.org/static/img/pandas_mark.svg)  
-![Streamlit](https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.png)  
+![Python](https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg) ![BeautifulSoup](https://pandas.pydata.org/static/img/pandas_mark.svg)  
+![Pandas](https://pandas.pydata.org/static/img/pandas_mark.svg)![Streamlit](https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.png)  
 
 ### Tools & Libraries
 - **Python**
@@ -170,6 +170,7 @@ Computer Science (AI & ML) | Data Engineering & Analytics Enthusiast
 📫 Connect with me on GitHub & LinkedIn
 
 ---
+
 
 
 
