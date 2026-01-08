@@ -12,9 +12,7 @@ An end-to-end **ETL (Extract → Transform → Load)** web scraping application 
 
 ## 🚀 Live Demo
 🔗 **Streamlit App:**  
-👉 https://<your-streamlit-app-link>.streamlit.app
-
-*(Replace with your actual deployed link)*
+👉 https://magicbricks-etl-pipeline-zprhaau8atehq76sgrfpyy.streamlit.app/
 
 ---
 
@@ -161,12 +159,25 @@ MagicBricks actively blocks scraping from cloud environments such as:
 - AWS / GCP / Azure servers
 
 ### ✅ Expected behavior
-- Scraper works when run **locally**
+- Scraper works when run **locally** and through the web
 - Streamlit cloud app demonstrates:
   - ETL pipeline
   - Data cleaning logic
   - CSV previews
   - UI & workflow
+
+###⚠️ Demo Mode 🧪
+
+In some cloud environments, live scraping from MagicBricks may be blocked (HTTP 403).
+When this happens, the app automatically switches to demo mode using sample Mumbai data:
+
+📄 sample_mumbai_raw_data.csv
+ → Preview raw data
+
+🧹 sample_mumbai_cleaned_data.csv
+ → Preview cleaned data
+
+This ensures you can still explore the ETL pipeline and test all functionality without live data.
 
 ## ⚠️ Disclaimer
 This project is intended for **educational and portfolio purposes**.
@@ -177,11 +188,15 @@ Please respect MagicBricks’ terms of service when scraping data.
 ## 👤 Author
 
 **Oscar Kiamba**
-Computer Science (AI & ML) | Data Engineering & Analytics Enthusiast
+Computer Science (AI & ML) | Data science & Ml Enthusiast
 
 📫 Connect with me on GitHub & LinkedIn
+👉 https://github.com/pyscar
+👉 https://www.linkedin.com/in/oscar-kiamba/
+
 
 ---
+
 
 
 
