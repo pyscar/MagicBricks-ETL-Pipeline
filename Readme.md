@@ -56,13 +56,14 @@ This project automates the process of collecting and preparing real-estate data 
 
 ```
 
-MagicBricks_web_scraping/
+magicbricks-etl-pipeline/
 │
 ├── app.py                     # Streamlit application
-├── requirements.txt           # Dependencies
+├── requirements.txt           # Project dependencies
 ├── README.md
 │
 ├── scraper/
+│   ├── __init__.py            # Marks scraper as a Python package
 │   ├── scraper.py             # Scraping controller
 │   ├── fetcher.py             # HTTP requests
 │   ├── parser.py              # HTML parsing
@@ -70,14 +71,16 @@ MagicBricks_web_scraping/
 │   └── config.py              # Headers & constants
 │
 ├── utils/
+│   ├── __init__.py            # Utility package
 │   └── data_cleaner.py        # Data cleaning & transformation
 │
 ├── data/
-│   ├── raw/                   # Raw scraped CSVs (small sample for demo)
-│   └── processed/             # Cleaned CSVs (small sample for demo)
+│   ├── raw/                   # Raw CSV samples
+│   └── processed/             # Cleaned CSV samples
 │
 └── .streamlit/
-└── config.toml            # Streamlit UI config
+    └── config.toml            # Streamlit theme configuration
+
 
 ````
 
@@ -165,6 +168,7 @@ Computer Science (AI & ML) | Data Engineering & Analytics Enthusiast
 📫 Connect with me on GitHub & LinkedIn
 
 ---
+
 
 
 
