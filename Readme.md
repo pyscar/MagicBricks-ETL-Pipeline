@@ -42,11 +42,6 @@ This project automates the process of collecting and preparing real-estate data 
 
 ---
 
-## 🧰 Tech Stack
-
-![Python](https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg) ![BeautifulSoup](https://pandas.pydata.org/static/img/pandas_mark.svg)  
-![Pandas](https://pandas.pydata.org/static/img/pandas_mark.svg)![Streamlit](https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.png)  
-
 ### Tools & Libraries
 - **Python**
 - **BeautifulSoup (bs4)**
@@ -170,6 +165,7 @@ Computer Science (AI & ML) | Data Engineering & Analytics Enthusiast
 📫 Connect with me on GitHub & LinkedIn
 
 ---
+
 
 
 
