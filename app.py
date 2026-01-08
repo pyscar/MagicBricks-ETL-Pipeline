@@ -1,10 +1,27 @@
-import streamlit as st
-import os
-import pandas as pd
+"""
+MagicBricks ETL Pipeline Streamlit App
+--------------------------------------
+This Streamlit app performs an ETL (Extract, Transform, Load) pipeline on
+MagicBricks property listings. Users can:
+1. Extract property data by scraping MagicBricks listings.
+2. Preview and download raw scraped data.
+3. Transform/clean the data for analysis.
+4. Preview and download cleaned data.
+5. Visualize the ETL pipeline progress.
+
+Dependencies:
+- Python 3.9+
+- Streamlit
+- Pandas
+- BeautifulSoup4
+- Requests
+"""
 
 from scraper.scraper import run_scraper
 from utils.data_cleaner import clean_data
-
+import streamlit as st
+import os
+import pandas as pd
 
 # -------------------------------
 # Page config 
@@ -13,7 +30,6 @@ st.set_page_config(
     page_title="MagicBricks ETL Pipeline",
     layout="centered"
 )
-
 
 # -------------------------------
 # Button styling
@@ -35,7 +51,6 @@ div.stButton > button:hover {
 </style>
 """, unsafe_allow_html=True)
 
-
 # -------------------------------
 # Title + Icon
 # -------------------------------
@@ -43,13 +58,10 @@ st.markdown(
     "<h1 style='text-align:center; color:#1f77b4;'>MagicBricks ETL Pipeline</h1>",
     unsafe_allow_html=True
 )
-
-
 st.markdown(
     "<div style='text-align: center; transform: translateX(-28px); font-size: 48px;'>🏠</div>",
     unsafe_allow_html=True
 )
-
 
 # -------------------------------
 # Session state
@@ -60,14 +72,15 @@ if "scraped" not in st.session_state:
 if "cleaned" not in st.session_state:
     st.session_state.cleaned = False
 
-
 # -------------------------------
 # User inputs
 # -------------------------------
-url = st.text_input("Enter MagicBricks URL",placeholder="https://www.magicbricks.com/...")
+url = st.text_input("Enter MagicBricks URL", placeholder="https://www.magicbricks.com/...")
 
-city_name = st.text_input("Enter city name (e.g. mumbai, chennai)",placeholder="mumbai").strip().lower()
-
+city_name = st.text_input(
+    "Enter city name (e.g. mumbai, chennai)", 
+    placeholder="mumbai"
+).strip().lower()
 
 # -------------------------------
 # File paths
@@ -77,7 +90,6 @@ clean_file = f"{city_name}_cleaned_data.csv"
 
 raw_path = os.path.join("data", "raw", raw_file)
 clean_path = os.path.join("data", "processed", clean_file)
-
 
 # -------------------------------
 # Run scraper (Extract)
@@ -91,12 +103,10 @@ if st.button("Run Scraper"):
             st.session_state.scraped = True
         st.success("Extraction completed")
 
-
 # -------------------------------
 # Preview + download raw data
 # -------------------------------
 if st.session_state.scraped and os.path.exists(raw_path):
-
     st.markdown("### Preview Raw Data")
     df_raw = pd.read_csv(raw_path)
     st.dataframe(df_raw.head(5), use_container_width=True)
@@ -109,7 +119,6 @@ if st.session_state.scraped and os.path.exists(raw_path):
             mime="text/csv"
         )
 
-
 # -------------------------------
 # Clean data (Transform)
 # -------------------------------
@@ -120,11 +129,10 @@ if st.session_state.scraped:
             st.session_state.cleaned = True
         st.success("Transformation completed")
 
-
 # -------------------------------
 # ETL Pipeline Visualization
 # -------------------------------
-st.markdown("<h2 style='text-align:center; color:#1f77b4;'>Data Pipeline</h2>",unsafe_allow_html=True)
+st.markdown("<h2 style='text-align:center; color:#1f77b4;'>Data Pipeline</h2>", unsafe_allow_html=True)
 
 c1, a1, c2, a2, c3 = st.columns([2, 1, 2, 1, 2])
 
@@ -145,10 +153,7 @@ def pipeline_box(label, color):
     """
 
 with c1:
-    st.markdown(
-        pipeline_box("Extract", "#2ecc71"),  # green
-        unsafe_allow_html=True
-    )
+    st.markdown(pipeline_box("Extract", "#2ecc71"), unsafe_allow_html=True)
 
 with a1:
     st.markdown(
@@ -157,10 +162,7 @@ with a1:
     )
 
 with c2:
-    st.markdown(
-        pipeline_box("Transform", "#3498db"),  # blue
-        unsafe_allow_html=True
-    )
+    st.markdown(pipeline_box("Transform", "#3498db"), unsafe_allow_html=True)
 
 with a2:
     st.markdown(
@@ -169,16 +171,12 @@ with a2:
     )
 
 with c3:
-    st.markdown(
-        pipeline_box("Load", "#ffffff"),  # white
-        unsafe_allow_html=True
-    )
+    st.markdown(pipeline_box("Load", "#ffffff"), unsafe_allow_html=True)
 
 # -------------------------------
 # Preview + download cleaned data
 # -------------------------------
 if st.session_state.cleaned and os.path.exists(clean_path):
-
     st.markdown("### Preview Cleaned Data")
     df_clean = pd.read_csv(clean_path)
     st.dataframe(df_clean.head(5), use_container_width=True)
@@ -190,7 +188,6 @@ if st.session_state.cleaned and os.path.exists(clean_path):
             file_name=clean_file,
             mime="text/csv"
         )
-
 
 # -------------------------------
 # Footer
