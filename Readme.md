@@ -165,8 +165,8 @@ MagicBricks actively blocks scraping from cloud environments such as:
   - Data cleaning logic
   - CSV previews
   - UI & workflow
-
-###⚠️ Demo Mode 🧪
+---
+### ⚠️ Demo Mode 🧪
 
 In some cloud environments, live scraping from MagicBricks may be blocked (HTTP 403).
 When this happens, the app automatically switches to demo mode using sample Mumbai data:
@@ -196,6 +196,7 @@ Computer Science (AI & ML) | Data science & Ml Enthusiast
 
 
 ---
+
 
 
 
