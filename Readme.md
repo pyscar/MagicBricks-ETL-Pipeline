@@ -1,12 +1,3 @@
-I see the problem — your Markdown has a few issues that make it not render properly:
-
-1. You have **extra backticks (`) around code blocks**, sometimes using four instead of three.
-2. The `<p>` tags with images work, but sometimes GitHub prefers simpler Markdown image syntax.
-3. The ETL pipeline section uses triple backticks incorrectly — it should be a code block or inline formatting, but right now it’s conflicting with the surrounding Markdown.
-4. Minor indentation issues inside code blocks (like project structure).
-
-Here’s a **cleaned, ready-to-copy version** that should render properly on GitHub:
-
 ```md
 # MagicBricks Property Data Scraper & ETL Pipeline
 
@@ -182,3 +173,4 @@ Computer Science (AI & ML) | Data Engineering & Analytics Enthusiast
 ```
 Do you want me to do that next?
 ```
+
