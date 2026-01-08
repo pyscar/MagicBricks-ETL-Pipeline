@@ -1,5 +1,3 @@
-
-```md
 # MagicBricks Property Data Scraper & ETL Pipeline
 
 An end-to-end **ETL (Extract → Transform → Load)** web scraping application that collects real-estate listings from **MagicBricks**, cleans and normalizes the data, and provides downloadable CSV outputs through an interactive **Streamlit** interface.
@@ -30,26 +28,20 @@ This project automates the process of collecting and preparing real-estate data 
 
 ## 🔁 ETL Pipeline
 
-```
+🌐 **Extract** → 🧹 **Transform** → 📦 **Load**
 
-🌐 Extract  →  🧹 Transform  →  📦 Load
-
-```
-
-- **Extract:** Web scraping using BeautifulSoup
-- **Transform:** Data cleaning, validation, normalization
-- **Load:** Structured CSV files ready for analysis
+- **Extract:** Web scraping using BeautifulSoup  
+- **Transform:** Data cleaning, validation, normalization  
+- **Load:** Structured CSV files ready for analysis  
 
 ---
 
 ## 🧰 Tech Stack
 
-<p align="left">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="45" height="45"/>
-  <img src="https://www.crummy.com/software/BeautifulSoup/bs4/doc/_images/bs4-logo.png" width="45" height="45"/>
-  <img src="https://pandas.pydata.org/static/img/pandas_mark.svg" width="45" height="45"/>
-  <img src="https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.png" width="120"/>
-</p>
+![Python](https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg)  
+![BeautifulSoup](https://pandas.pydata.org/static/img/pandas_mark.svg)  
+![Pandas](https://pandas.pydata.org/static/img/pandas_mark.svg)  
+![Streamlit](https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.png)  
 
 ### Tools & Libraries
 - **Python**
@@ -63,32 +55,28 @@ This project automates the process of collecting and preparing real-estate data 
 
 ## 📂 Project Structure
 
-```
-
-MagicBricks_web_scraping/
+MagicBricks_etl_pipeline/
 │
-├── app.py                     # Streamlit application
-├── requirements.txt           # Dependencies
+├── app.py # Streamlit application
+├── requirements.txt # Dependencies
 ├── README.md
 │
 ├── scraper/
-│   ├── scraper.py             # Scraping controller
-│   ├── fetcher.py             # HTTP requests
-│   ├── parser.py              # HTML parsing
-│   ├── paginator.py           # Pagination logic
-│   └── config.py              # Headers & constants
+│ ├── scraper.py # Scraping controller
+│ ├── fetcher.py # HTTP requests
+│ ├── parser.py # HTML parsing
+│ ├── paginator.py # Pagination logic
+│ └── config.py # Headers & constants
 │
 ├── utils/
-│   └── data_cleaner.py        # Data cleaning & transformation
+│ └── data_cleaner.py # Data cleaning & transformation
 │
 ├── data/
-│   ├── raw/                   # Raw scraped CSVs (gitignored)
-│   └── processed/             # Cleaned CSVs (gitignored)
+│ ├── raw/ # Raw scraped CSVs (small sample for demo)
+│ └── processed/ # Cleaned CSVs (small sample for demo)
 │
 └── .streamlit/
-└── config.toml            # Streamlit UI config
-
-````
+└── config.toml # Streamlit UI config
 
 ---
 
@@ -96,86 +84,82 @@ MagicBricks_web_scraping/
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/<your-username>/MagicBricks_web_scraping.git
-cd MagicBricks_web_scraping
-````
+git clone https://github.com/<your-username>/magicbricks-etl-pipeline.git
+cd magicbricks-etl-pipeline
 
 ### 2️⃣ Create virtual environment
-
 ```bash
 python -m venv .venv
 source .venv/bin/activate      # Mac/Linux
 .venv\Scripts\activate         # Windows
-```
 
 ### 3️⃣ Install dependencies
-
-```bash
 pip install -r requirements.txt
-```
 
 ### 4️⃣ Run Streamlit app
-
-```bash
 streamlit run app.py
-```
 
----
+📥 Outputs
+Raw Data
 
-## 📥 Outputs
+Original scraped data
 
-### Raw Data
+Minimal processing
 
-* Original scraped data
-* Minimal processing
-* Useful for debugging or re-processing
+Useful for debugging or re-processing
 
-### Cleaned Data
+Cleaned Data
 
-* Standardized prices (INR / Lakh)
-* Clean locality & city extraction
-* Normalized property attributes
-* Analysis-ready format
+Standardized prices (INR / Lakh)
 
----
+Clean locality & city extraction
 
-## 🧠 Key Challenges Solved
+Normalized property attributes
 
-* Mixed location formats (comma & space separated)
-* Missing project names
-* City vs locality misclassification (e.g., *New Delhi*)
-* Pagination handling
-* Safe scraping with headers & timeouts
+Analysis-ready format
 
----
+🧠 Key Challenges Solved
 
-## 📌 Future Enhancements
+Mixed location formats (comma & space separated)
 
-* Add price & BHK filters
-* Interactive charts (price distribution)
-* Database storage (PostgreSQL / SQLite)
-* Scheduled scraping
-* API layer
+Missing project names
 
----
+City vs locality misclassification (e.g., New Delhi)
 
-## ⚠️ Disclaimer
+Pagination handling
 
-This project is for **educational purposes only**.
+Safe scraping with headers & timeouts
+
+📌 Future Enhancements
+
+Add price & BHK filters
+
+Interactive charts (price distribution)
+
+Database storage (PostgreSQL / SQLite)
+
+Scheduled scraping
+
+API layer
+
+⚠️ Disclaimer
+
+This project is for educational purposes only.
 Please respect MagicBricks’ terms of service when scraping data.
 
----
+👤 Author
 
-## 👤 Author
-
-**Oscar Ka**
+Oscar Ka
 Computer Science (AI & ML) | Data Engineering & Analytics Enthusiast
 
 📫 Connect with me on GitHub & LinkedIn
 
----
-
 ⭐ If you find this project useful, consider giving it a star!
 
-```
+
+
+
+
+
+
 
