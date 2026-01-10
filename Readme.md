@@ -86,7 +86,7 @@ magicbricks-etl-pipeline/
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/<your-username>/magicbricks-etl-pipeline.git
+git clone [https://github.com/pyscar/MagicBricks-ETL-Pipeline]
 cd magicbricks-etl-pipeline
 ````
 
@@ -194,6 +194,7 @@ Computer Science (AI & ML) | Data science & Ml Enthusiast
 
 ## Complete video link for the project
 * video link -> https://www.youtube.com/watch?v=VzqiQuwK2C0
+
 
 
 
