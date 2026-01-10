@@ -84,8 +84,6 @@ magicbricks-etl-pipeline/
 
 ---
 
-## 🖥️ How to Run Locally
-
 ### 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/<your-username>/magicbricks-etl-pipeline.git
@@ -194,8 +192,11 @@ Computer Science (AI & ML) | Data science & Ml Enthusiast
 👉 https://github.com/pyscar
 👉 https://www.linkedin.com/in/oscar-kiamba/
 
+## Complete video link for the project
+* video link -> https://www.youtube.com/watch?v=VzqiQuwK2C0
 
----
+
+
 
 
 
